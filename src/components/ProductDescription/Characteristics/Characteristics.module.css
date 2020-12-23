@@ -1,0 +1,19 @@
+.characteristics {
+  grid-area: 5 / 1 / 6 / 3;
+  margin-top: 15px;
+}
+
+.characteristics span {
+  font-weight: 600;
+}
+
+.characteristics li {
+  display: flex;
+  align-items: center;
+}
+
+.characteristics li:before {
+  content: "·";
+  font-size: 17px;
+  padding-right: 5px;
+}

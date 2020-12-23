@@ -1,0 +1,55 @@
+.delivery {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  grid-area: delivery;
+  height: min-content;
+}
+
+.deliveryText:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+  transition: 0.5s all;
+}
+
+.delivery input:checked + label .deliveryText:before {
+  background-color: rgb(48, 193, 75);
+}
+
+.delivery input:checked + label .deliveryText {
+  background-color: white;
+}
+
+.delivery input {
+  display: none;
+}
+
+.deliveryPrice {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: 600;
+}
+
+.deliveryText {
+  position: relative;
+  padding: 20px 100px 20px 50px;
+  font-size: 14px;
+  background-color: rgba(225, 225, 225, 0.7);
+  transition: 0.5s all;
+}
+
+.deliveryText:hover {
+  background-color: rgba(225, 225, 225, 0.4);
+}
+
+label:not(:last-child) p {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,17 @@
+.productsItem {
+  width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.productsItem img {
+  transition: all 0.3s;
+}
+
+.productsItem img:hover {
+  transform: scale(1.05);
+}
+
+.productsItem:not(:last-child) {
+  margin-right: 30px;
+}

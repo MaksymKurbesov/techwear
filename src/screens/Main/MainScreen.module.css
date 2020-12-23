@@ -1,0 +1,24 @@
+.main {
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px auto 0;
+  padding-bottom: 200px;
+}
+
+.mainText {
+  width: 400px;
+  text-align: right;
+}
+
+.mainText h2 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.mainText p {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 17px;
+}

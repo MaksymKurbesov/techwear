@@ -1,0 +1,51 @@
+.checkout {
+  display: grid;
+  max-width: 1200px;
+  margin: 75px auto 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "products delivery"
+    ". button";
+  column-gap: 30px;
+}
+
+.toFormButton {
+  grid-area: button;
+  text-align: right;
+  padding-top: 20px;
+}
+
+.toFormButton a {
+  width: 150px;
+  display: inline-block;
+  grid-area: button;
+  text-align: center;
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+}
+
+.products {
+  padding: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.products p {
+  text-align: justify;
+  margin-bottom: 5px;
+}
+
+.total p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+}
+

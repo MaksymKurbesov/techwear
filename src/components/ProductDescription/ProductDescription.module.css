@@ -1,0 +1,8 @@
+.description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, min-content);
+  row-gap: 35px;
+  padding-top: 75px;
+  font-size: 13px;
+}

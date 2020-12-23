@@ -1,0 +1,16 @@
+.filterItem:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.filterItem:nth-child(2) {
+  margin-bottom: 50px;
+}
+
+.filterItem:last-child {
+  margin-top: 50px;
+}
+
+.activeFilter {
+  transition: all 0.2s;
+  font-weight: 600;
+}

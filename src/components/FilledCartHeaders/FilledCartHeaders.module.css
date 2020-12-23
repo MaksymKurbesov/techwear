@@ -1,0 +1,25 @@
+th {
+  padding-bottom: 30px;
+}
+
+.photo {
+  width: 100px;
+}
+.brand {
+  width: 120px;
+}
+.name {
+  width: 250px;
+}
+.price {
+  width: 100px;
+}
+.quantity {
+  width: 110px;
+}
+.total {
+  width: 125px;
+}
+.delete {
+  width: 100px;
+}

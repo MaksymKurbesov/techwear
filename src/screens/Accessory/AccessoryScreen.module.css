@@ -1,0 +1,11 @@
+.accessory {
+  display: grid;
+  max-width: 1200px;
+  grid-template-areas: "filter products";
+  grid-template-columns: 200px auto;
+  margin: 0 auto;
+}
+
+.accessory {
+  grid-template-areas: ". products";
+}

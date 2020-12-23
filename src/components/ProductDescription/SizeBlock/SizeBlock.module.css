@@ -1,0 +1,37 @@
+.size {
+  display: flex;
+  flex-direction: column;
+}
+
+.selectSize input {
+  display: none;
+}
+
+.selectSize {
+  display: flex;
+  margin-top: 15px;
+}
+
+.sizeLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 17px;
+  height: 30px;
+  border: 1px solid black; 
+  cursor: pointer;
+}
+
+span.chooseSize {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.sizeLabel:not(:last-child) {
+  margin-right: 20px;
+}
+
+.selectSize input:checked + label {
+  background-color: black;
+  color: white;
+}

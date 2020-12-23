@@ -1,0 +1,12 @@
+.description {
+  grid-area: 6 / 1 / 7 / 3;
+  line-height: 20px;
+}
+
+.description span {
+  font-weight: 600;
+}
+
+.description p {
+  margin-top: 15px;
+}
