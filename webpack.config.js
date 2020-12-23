@@ -1,7 +1,10 @@
-let path = require("path");
-let MiniCssExtractPlugin = require("mini-css-extract-plugin");
+/* eslint-disable no-undef */
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
-let conf = {
+const conf = {
   entry: "./src/main.js",
   output: {
     path: path.resolve(__dirname, "./dist/"),
@@ -9,6 +12,8 @@ let conf = {
     publicPath: "dist/",
   },
   plugins: [
+    new CleanWebpackPlugin(),
+    new CopyPlugin([{ from: "src/assets/images", to: "assets/images" }]),
     new MiniCssExtractPlugin({
       filename: "styles.css",
     }),
