@@ -13,7 +13,10 @@ const conf = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: "Techwear",
+      template: "src/template.html",
+    }),
     new CopyPlugin([{ from: "src/assets/images", to: "assets/images" }]),
     new MiniCssExtractPlugin({
       filename: "styles.css",
