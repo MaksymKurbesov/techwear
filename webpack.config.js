@@ -7,9 +7,9 @@ const CopyPlugin = require("copy-webpack-plugin");
 const conf = {
   entry: "./src/main.js",
   output: {
-    path: path.resolve(__dirname, "./dist/"),
+    path: path.resolve(__dirname, "./public/"),
     filename: "main.js",
-    publicPath: "dist/",
+    publicPath: "public/",
   },
   plugins: [
     new CleanWebpackPlugin(),
