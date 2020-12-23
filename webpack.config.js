@@ -2,6 +2,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 const conf = {
@@ -13,6 +14,7 @@ const conf = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin(),
     new CopyPlugin([{ from: "src/assets/images", to: "assets/images" }]),
     new MiniCssExtractPlugin({
       filename: "styles.css",
