@@ -10,7 +10,6 @@ const conf = {
   output: {
     path: path.resolve(__dirname, "./public/"),
     filename: "main.js",
-    publicPath: "public/",
   },
   plugins: [
     new CleanWebpackPlugin(),
