@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styles from './Footer.module.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
@@ -8,19 +8,35 @@ const Footer = () => {
       <div className={styles.project}>
         <h3>Проект</h3>
         <ul>
-          <li><NavLink>Одежда</NavLink></li>
-          <li><NavLink>Аксессуары</NavLink></li>
-          <li><NavLink>Блог</NavLink></li>
-          <li><NavLink>Контакты</NavLink></li>
+          <li>
+            <NavLink>Одежда</NavLink>
+          </li>
+          <li>
+            <NavLink>Аксессуары</NavLink>
+          </li>
+          <li>
+            <NavLink>Блог</NavLink>
+          </li>
+          <li>
+            <NavLink>Контакты</NavLink>
+          </li>
         </ul>
       </div>
       <div className={styles.buyers}>
         <h3>ПОКУПАТЕЛЯМ</h3>
         <ul>
-          <li><NavLink>Отследить заказ</NavLink></li>
-          <li><NavLink>Доставка и оплата</NavLink></li>
-          <li><NavLink>Обмен и возврат</NavLink></li>
-          <li><NavLink>Карта REACTION</NavLink></li>
+          <li>
+            <NavLink>Отследить заказ</NavLink>
+          </li>
+          <li>
+            <NavLink>Доставка и оплата</NavLink>
+          </li>
+          <li>
+            <NavLink>Обмен и возврат</NavLink>
+          </li>
+          <li>
+            <NavLink>Карта REACTION</NavLink>
+          </li>
         </ul>
       </div>
       <div className={styles.contacts}>
@@ -35,12 +51,15 @@ const Footer = () => {
       </div>
       <div className={styles.subscribe}>
         <h3>ПОДПИСЫВАЙТЕСЬ</h3>
-        <p>Два раза в месяц мы присылаем письма с обзором новинок и свежими статьями из блога.</p>
-        <input type="email" placeholder="Введите свой email"/>
+        <p>
+          Два раза в месяц мы присылаем письма с обзором новинок и свежими
+          статьями из блога.
+        </p>
+        <input type="email" placeholder="Введите свой email" />
         <button>Получать свежие материалы</button>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

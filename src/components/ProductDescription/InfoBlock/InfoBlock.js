@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './InfoBlock.module.css';
+import React from "react";
+import styles from "./InfoBlock.module.css";
 
 const InfoBlock = ({ label, value }) => {
   return (
@@ -7,7 +7,7 @@ const InfoBlock = ({ label, value }) => {
       <span>{label}</span>
       <p>{value}</p>
     </div>
-  )
-}
+  );
+};
 
 export default InfoBlock;

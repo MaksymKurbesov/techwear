@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './FilledCartHeaders.module.css';
+import React from "react";
+import styles from "./FilledCartHeaders.module.css";
 
 const FilledCartHeaders = () => {
   return (
@@ -12,7 +12,7 @@ const FilledCartHeaders = () => {
       <th className={styles.total}>Всего</th>
       <th className={styles.delete}></th>
     </tr>
-  )
-}
+  );
+};
 
 export default FilledCartHeaders;

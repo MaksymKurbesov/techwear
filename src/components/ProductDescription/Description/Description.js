@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './Description.module.css';
+import React from "react";
+import styles from "./Description.module.css";
 
 const Description = ({ description }) => {
   return (
@@ -7,7 +7,7 @@ const Description = ({ description }) => {
       <span>Описание</span>
       <p>{description}</p>
     </div>
-  )
-}
+  );
+};
 
 export default Description;

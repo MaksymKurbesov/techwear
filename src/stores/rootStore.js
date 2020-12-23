@@ -1,8 +1,7 @@
-import CartStore from './cart';
-import ProductsStore from './products';
+import CartStore from "./cart";
+import ProductsStore from "./products";
 
-import mainAPI from '../utils/api';
-
+import mainAPI from "../utils/api";
 
 class rootStore {
   constructor() {
