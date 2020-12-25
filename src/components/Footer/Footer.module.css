@@ -1,8 +1,9 @@
 footer {
   padding: 75px 300px;
   display: grid;
+  justify-content: center;
   grid-template-columns: 200px 200px 200px 250px;
-  justify-content: space-between;
+  column-gap: 30px;
   background-color: rgb(17, 17, 17);
 }
 
@@ -57,4 +58,24 @@ footer h3 {
 .subscribe button:hover {
   background-color: white;
   color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    grid-template-columns: 300px 300px;
+    row-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    padding: 40px;
+    grid-template-columns: 350px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer {
+    grid-template-columns: 200px;
+  }
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import NavMenu from "./NavMenu/NavMenu";
+import MinimizeNavMenu from "./MinimizeNavMenu/MinimizeNavMenu";
 import { NavLink } from "react-router-dom";
 import { observer, inject } from "mobx-react";
 
@@ -8,54 +10,28 @@ const Header = inject("stores")(
   observer(({ stores }) => {
     const CartModel = stores.cart;
 
+    const handleClickToWear = () => {
+      stores.products.setCategory("wear");
+      stores.products.setFilter("");
+    };
+
+    const handleClickToAccessory = () => {
+      stores.products.setCategory("accessory");
+    };
+
     return (
       <header>
         <span className={styles.logotype}>
           <NavLink to="/">TECHWEAR</NavLink>
         </span>
+        <MinimizeNavMenu />
         <span className={styles.headerCart}>
           <NavLink to="/cart">{`Корзина [${CartModel.items.length}]`}</NavLink>
         </span>
-        <nav>
-          <ul className={styles.navLinks}>
-            <li>
-              <NavLink
-                activeClassName={styles.activeLink}
-                onClick={() => {
-                  stores.products.setCategory("wear");
-                  stores.products.setFilter("");
-                }}
-                to="/wear"
-              >
-                Одежда
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                activeClassName={styles.activeLink}
-                onClick={() => stores.products.setCategory("accessory")}
-                to="/accessory"
-              >
-                Аксессуары
-              </NavLink>
-            </li>
-            <li>
-              <NavLink activeClassName={styles.activeLink} to="/blog">
-                Блог
-              </NavLink>
-            </li>
-            <li>
-              <NavLink activeClassName={styles.activeLink} to="/shipping">
-                Доставка и оплата
-              </NavLink>
-            </li>
-            <li>
-              <NavLink activeClassName={styles.activeLink} to="/contacts">
-                Контакты
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+        <NavMenu
+          toWear={handleClickToWear}
+          toAccessory={handleClickToAccessory}
+        />
       </header>
     );
   })

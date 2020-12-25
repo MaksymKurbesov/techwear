@@ -6,19 +6,19 @@ const Footer = () => {
   return (
     <footer>
       <div className={styles.project}>
-        <h3>Проект</h3>
+        <h3>ПРОЕКТ</h3>
         <ul>
           <li>
-            <NavLink>Одежда</NavLink>
+            <NavLink to="/wear">Одежда</NavLink>
           </li>
           <li>
-            <NavLink>Аксессуары</NavLink>
+            <NavLink to="/accessory">Аксессуары</NavLink>
           </li>
           <li>
-            <NavLink>Блог</NavLink>
+            <NavLink to="/blog">Блог</NavLink>
           </li>
           <li>
-            <NavLink>Контакты</NavLink>
+            <NavLink to="/contacts">Контакты</NavLink>
           </li>
         </ul>
       </div>
@@ -26,16 +26,16 @@ const Footer = () => {
         <h3>ПОКУПАТЕЛЯМ</h3>
         <ul>
           <li>
-            <NavLink>Отследить заказ</NavLink>
+            <NavLink to="/">Отследить заказ</NavLink>
           </li>
           <li>
-            <NavLink>Доставка и оплата</NavLink>
+            <NavLink to="/">Доставка и оплата</NavLink>
           </li>
           <li>
-            <NavLink>Обмен и возврат</NavLink>
+            <NavLink to="/">Обмен и возврат</NavLink>
           </li>
           <li>
-            <NavLink>Карта REACTION</NavLink>
+            <NavLink to="/">Карта REACTION</NavLink>
           </li>
         </ul>
       </div>

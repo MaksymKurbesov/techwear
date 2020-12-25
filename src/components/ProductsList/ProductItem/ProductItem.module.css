@@ -15,3 +15,13 @@
 .productsItem:not(:last-child) {
   margin-right: 30px;
 }
+
+@media screen and (max-width: 1000px) {
+  .productsItem {
+    width: 250px;
+  }
+
+  .productsItem img {
+    width: 250px;
+  }
+}

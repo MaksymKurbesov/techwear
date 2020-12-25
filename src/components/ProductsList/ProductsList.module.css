@@ -4,3 +4,9 @@
   margin-top: 75px;
   grid-area: products;
 }
+
+@media screen and (max-width: 800px) {
+  .productsList {
+    justify-content: center;
+  }
+}
