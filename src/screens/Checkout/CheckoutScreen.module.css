@@ -7,6 +7,7 @@
     "products delivery"
     ". button";
   column-gap: 30px;
+  padding-bottom: 100px;
 }
 
 .toFormButton {
@@ -16,7 +17,7 @@
 }
 
 .toFormButton a {
-  width: 150px;
+  width: 200px;
   display: inline-block;
   grid-area: button;
   text-align: center;

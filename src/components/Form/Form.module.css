@@ -1,0 +1,30 @@
+fieldset {
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0;
+}
+
+fieldset:last-child {
+  margin-top: 50px;
+}
+
+.checkoutForm div {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutForm label {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.checkoutForm input {
+  height: 35px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 10px;
+}

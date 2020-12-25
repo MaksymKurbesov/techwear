@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Form from "../../components/Form/Form";
 import CheckoutProductsItem from "../../components/CheckoutProductsItem/CheckoutProductsItem";
 import CheckoutDeliveryInfo from "../../components/CheckoutDeliveryInfo/CheckoutDeliveryInfo";
 import { NavLink } from "react-router-dom";
@@ -22,6 +23,7 @@ const CheckoutScreen = inject("stores")(
 
     return (
       <div className={styles.checkout}>
+        <Form />
         <div className={styles.products}>
           <ul>{checkoutElements}</ul>
           <div className={styles.total}>
@@ -40,7 +42,7 @@ const CheckoutScreen = inject("stores")(
         </div>
         <CheckoutDeliveryInfo setDelivery={setDelivery} />
         <div className={styles.toFormButton}>
-          <NavLink to="form">Далее</NavLink>
+          <NavLink to="form">Оформить заказ</NavLink>
         </div>
       </div>
     );
