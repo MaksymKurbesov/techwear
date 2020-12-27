@@ -63,3 +63,9 @@ header {
 a.activeLink {
   font-weight: 600;
 }
+
+@media screen and (max-width: 450px) {
+  .logotype {
+    margin-left: -50px;
+  }
+}

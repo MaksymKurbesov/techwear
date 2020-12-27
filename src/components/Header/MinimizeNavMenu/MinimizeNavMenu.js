@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./MinimizeNavMenu.module.css";
 
-const MinimizeNavMenu = () => {
+const MinimizeNavMenu = ({ toWear, toAccessory }) => {
   const [isOpened, setIsOpened] = useState(false);
+
+  const handleClick = () => {
+    setIsOpened((prevIsOpened) => !prevIsOpened);
+  };
 
   const OpenedMenu = () => {
     const activeClass = isOpened ? styles.active : "";
@@ -11,13 +15,17 @@ const MinimizeNavMenu = () => {
     return (
       <>
         <div className={`${styles.openedMenu} ${activeClass}`}>
-          <span onClick={() => setIsOpened(false)}>X</span>
+          <span onClick={handleClick}>X</span>
           <ul>
             <li>
-              <NavLink to="/wear">Одежда</NavLink>
+              <NavLink onClick={toWear} to="/wear">
+                Одежда
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/accessory">Аксессуары</NavLink>
+              <NavLink onClick={toAccessory} to="/accessory">
+                Аксессуары
+              </NavLink>
             </li>
             <li>
               <NavLink to="/blog">Блог</NavLink>

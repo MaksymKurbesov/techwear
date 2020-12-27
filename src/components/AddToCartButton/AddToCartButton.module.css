@@ -12,3 +12,10 @@
 .addCartButton:disabled {
   background-color: rgba(0, 0, 0, 0.2);
 }
+
+
+@media screen and (max-width: 450px) {
+  .addCartButton, .removeCartButton {
+    padding: 5px;
+  }
+}

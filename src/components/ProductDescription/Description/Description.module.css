@@ -1,4 +1,5 @@
 .description {
+  max-width: 450px;
   grid-area: 6 / 1 / 7 / 3;
   line-height: 20px;
 }

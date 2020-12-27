@@ -6,3 +6,15 @@
   padding-top: 75px;
   font-size: 13px;
 }
+
+@media screen and (max-width: 815px) {
+  .description { 
+    padding-top: 15px; 
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .description {
+    grid-template-columns: repeat(1, 200px)
+  }
+}

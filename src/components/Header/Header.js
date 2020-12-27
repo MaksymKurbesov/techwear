@@ -24,7 +24,10 @@ const Header = inject("stores")(
         <span className={styles.logotype}>
           <NavLink to="/">TECHWEAR</NavLink>
         </span>
-        <MinimizeNavMenu />
+        <MinimizeNavMenu
+          toAccessory={handleClickToAccessory}
+          toWear={handleClickToWear}
+        />
         <span className={styles.headerCart}>
           <NavLink to="/cart">{`Корзина [${CartModel.items.length}]`}</NavLink>
         </span>
