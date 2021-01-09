@@ -1,11 +1,16 @@
 .productsList {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 75px;
   grid-area: products;
 }
 
 @media screen and (max-width: 800px) {
+  .productsList {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .productsList {
     justify-content: center;
   }

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import FilterItem from "./FilterItem/FilterItem";
-import styles from "./Filter.module.css";
+import styles from "./FilterList.module.css";
 
 const FilterList = ({ filters, handleClick }) => {
   const filterElements = filters.map((filter) => {

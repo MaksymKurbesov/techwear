@@ -12,7 +12,7 @@
   transform: scale(1.05);
 }
 
-.productsItem:not(:last-child) {
+.productsItem {
   margin-right: 30px;
 }
 

@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import Form from "../../components/Form/Form";
+import FinalOrderModal from "../../components/FinalOrderModal/FinalOrderModal";
 import CheckoutProductsItem from "../../components/CheckoutProductsItem/CheckoutProductsItem";
 import CheckoutDeliveryInfo from "../../components/CheckoutDeliveryInfo/CheckoutDeliveryInfo";
-import { NavLink } from "react-router-dom";
 import { observer, inject } from "mobx-react";
 import styles from "./CheckoutScreen.module.css";
 
 const CheckoutScreen = inject("stores")(
   observer(({ stores }) => {
-    const [delivery, setDelivery] = useState("");
+    const [isVisible, setIsVisible] = useState(false);
+    const formStore = stores.form;
+    const showModal = () => {
+      setIsVisible(true);
+      document.body.style.overflow = "hidden";
+    };
+    const hideModal = () => {
+      setIsVisible(false);
+      document.body.style.overflow = "visible";
+    };
     const checkoutElements = stores.cart.items.map((item) => {
       const product = stores.products.detailsById(item.id);
 
@@ -30,20 +39,21 @@ const CheckoutScreen = inject("stores")(
             <p>
               Доставка:{" "}
               <span>
-                {delivery === ""
+                {formStore.delivery === ""
                   ? `Выберите способ доставки`
-                  : `₴ ${delivery}.00`}
+                  : `₴ ${formStore.delivery}.00`}
               </span>
             </p>
             <p>
-              Итого: <span>₴ {stores.cart.total + +delivery}.00</span>
+              Итого: <span>₴ {stores.cart.total + +formStore.delivery}.00</span>
             </p>
           </div>
         </div>
-        <CheckoutDeliveryInfo setDelivery={setDelivery} />
+        <CheckoutDeliveryInfo setDelivery={formStore.setDelivery} />
         <div className={styles.toFormButton}>
-          <NavLink to="form">Оформить заказ</NavLink>
+          <button onClick={showModal}>Оформить заказ</button>
         </div>
+        <FinalOrderModal isVisible={isVisible} hideModal={hideModal} />
       </div>
     );
   })

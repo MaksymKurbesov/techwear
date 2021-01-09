@@ -1,8 +1,0 @@
-.filterList {
-  margin-top: 100px;
-  grid-area: filter;
-}
-
-.filterList__hidden {
-  visibility: hidden;
-}

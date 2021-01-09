@@ -1,5 +1,6 @@
 import React from "react";
 import FilterList from "../../components/FilterList/FilterList";
+import MinimizeFilterList from "../../components/FilterList/MinimizeFilterList/MinimizeFilterList";
 import ProductsList from "../../components/ProductsList/ProductsList";
 import { FILTERS } from "../../utils/const";
 import { inject, observer } from "mobx-react";
@@ -21,6 +22,7 @@ const WearScreen = inject("stores")(
     return (
       <div className={styles.wear}>
         <FilterList handleClick={changeFilter} filters={FILTERS} />
+        <MinimizeFilterList />
         <ProductsList products={filteredProducts} />
       </div>
     );

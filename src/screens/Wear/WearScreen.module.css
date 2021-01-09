@@ -22,3 +22,10 @@
     grid-template-columns: 100px 400px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .wear {
+    display: block;
+    padding-left: 44px;
+  }
+}

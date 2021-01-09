@@ -1,0 +1,11 @@
+.filterList {
+  margin-top: 100px;
+  grid-area: filter;
+}
+
+
+@media screen and (max-width: 600px) {
+  .filterList {
+    display: none;
+  }
+}
