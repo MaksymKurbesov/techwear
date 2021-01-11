@@ -2,14 +2,59 @@
   display: none;
 }
 
-
 .finalOrderModalShow {
   position: fixed;
   top: 0;
   left: 0;
-  display: block;
+  display: flex;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.finalOrderModalWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  padding-top: 100px;
+}
+
+.finalOrderModalWrapper h2 {
+  word-wrap: break-word;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.finalOrderModalWrapper p {
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.finalOrderModalWrapper > span {
+  display: block;
+  margin-top: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.finalOrderModalWrapper p span {
+  font-weight: 700;
+}
+
+.finalOrderModalWrapper i {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-style: normal;
+  cursor: pointer;
 }

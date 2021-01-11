@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./CheckoutDeliveryInfo.module.css";
 
-const CheckoutDeliveryInfo = ({ setDelivery }) => {
+const CheckoutDeliveryInfo = ({ formik }) => {
   return (
     <div className={styles.delivery}>
       <input
-        onChange={(evt) => setDelivery(evt.target.value)}
+        onChange={formik.handleChange}
         id="kyiv"
         type="radio"
         name="delivery"
@@ -20,7 +20,7 @@ const CheckoutDeliveryInfo = ({ setDelivery }) => {
         </p>
       </label>
       <input
-        onChange={(evt) => setDelivery(evt.target.value)}
+        onChange={formik.handleChange}
         id="ukraine"
         type="radio"
         name="delivery"
@@ -35,7 +35,7 @@ const CheckoutDeliveryInfo = ({ setDelivery }) => {
         </p>
       </label>
       <input
-        onChange={(evt) => setDelivery(evt.target.value)}
+        onChange={formik.handleChange}
         id="world"
         type="radio"
         name="delivery"

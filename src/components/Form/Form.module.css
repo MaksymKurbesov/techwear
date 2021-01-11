@@ -1,3 +1,4 @@
+
 fieldset {
   display: flex;
   justify-content: space-between;
@@ -7,8 +8,8 @@ fieldset {
   min-width: 0;
 }
 
-fieldset:last-child {
-  margin-top: 50px;
+form fieldset:nth-child(2){
+  margin: 40px 0; 
 }
 
 .checkoutForm div {
@@ -29,6 +30,27 @@ fieldset:last-child {
   padding-left: 10px;
 }
 
-.validateFirstName {
-  
+.submitOrder {
+  grid-area: button;
+  text-align: right;
+  padding-top: 20px;
+}
+
+.submitOrder button {
+  width: 200px;
+  display: inline-block;
+  grid-area: button;
+  border: none;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  transition: 0.3s all;
+}
+
+.submitOrder button:active {
+  transform: translate3d(0, -5px, 0);
 }
