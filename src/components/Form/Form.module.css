@@ -1,4 +1,3 @@
-
 fieldset {
   display: flex;
   justify-content: space-between;
@@ -13,6 +12,7 @@ form fieldset:nth-child(2){
 }
 
 .checkoutForm div {
+  position: relative;
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -53,4 +53,17 @@ form fieldset:nth-child(2){
 
 .submitOrder button:active {
   transform: translate3d(0, -5px, 0);
+}
+
+div.error {
+  height: 32px;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #f77272;
+  position: absolute;
+  bottom: -40px;
+}
+
+.error + input {
+  border: 1px solid #f77272;
 }

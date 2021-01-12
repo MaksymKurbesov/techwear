@@ -1,37 +1,17 @@
 import React, { useState } from "react";
 import Form from "../../components/Form/Form";
 import FinalOrderModal from "../../components/FinalOrderModal/FinalOrderModal";
-import CheckoutProductsItem from "../../components/CheckoutProductsItem/CheckoutProductsItem";
+import CheckoutProducts from "../../components/CheckoutProducts/CheckoutProducts";
 import CheckoutDeliveryInfo from "../../components/CheckoutDeliveryInfo/CheckoutDeliveryInfo";
 import CheckoutTotal from "../../components/CheckoutTotal/CheckoutTotal";
-
 import { observer, inject } from "mobx-react";
-import { useFormik } from "formik";
+import { Formik } from "formik";
 import styles from "./CheckoutScreen.module.css";
 
 const CheckoutScreen = inject("stores")(
   observer(({ stores }) => {
     const [isVisibleModal, setIsVisibleModal] = useState(false);
     const [orderData, setOrderData] = useState({});
-    const formik = useFormik({
-      initialValues: {
-        firstName: "",
-        lastName: "",
-        phoneNumber: "",
-        email: "",
-        delivery: "",
-      },
-      onSubmit: (values, { resetForm }) => {
-        const savedData = {};
-        for (const value in values) {
-          savedData[value] = values[value];
-        }
-        setOrderData(savedData);
-        showModal();
-        resetForm();
-        stores.cart.clean();
-      },
-    });
 
     const showModal = () => {
       setIsVisibleModal(true);
@@ -45,31 +25,52 @@ const CheckoutScreen = inject("stores")(
       document.body.style.marginRight = "0";
     };
 
-    const checkoutElements = stores.cart.items.map((item) => {
-      const product = stores.products.detailsById(item.id);
-
-      return (
-        <CheckoutProductsItem
-          product={product}
-          key={item.id}
-          quantity={item.quantity}
-        />
-      );
-    });
-
     return (
       <div className={styles.checkout}>
-        <Form formik={formik} />
-        <div className={styles.products}>
-          <ul>{checkoutElements}</ul>
-          <CheckoutTotal formik={formik} cartTotal={stores.cart.total} />
-        </div>
-        <CheckoutDeliveryInfo formik={formik} />
-        <FinalOrderModal
-          isVisible={isVisibleModal}
-          hideModal={hideModal}
-          orderData={orderData}
-        />
+        <Formik
+          initialValues={{
+            firstName: "",
+            lastName: "",
+            phoneNumber: "",
+            email: "",
+            delivery: "",
+          }}
+          onSubmit={(values, actions) => {
+            const savedData = {};
+            for (const value in values) {
+              savedData[value] = values[value];
+            }
+            setOrderData(savedData);
+            showModal();
+            stores.cart.clean();
+            actions.resetForm();
+          }}
+        >
+          {(formData) => {
+            const { values, handleChange } = formData;
+            return (
+              <>
+                <Form formData={formData} />
+                <div className={styles.products}>
+                  <CheckoutProducts
+                    cartItems={stores.cart.items}
+                    detailsById={stores.products.detailsById}
+                  />
+                  <CheckoutTotal
+                    delivery={values.delivery}
+                    cartTotal={stores.cart.total}
+                  />
+                </div>
+                <CheckoutDeliveryInfo handleChange={handleChange} />
+                <FinalOrderModal
+                  isVisible={isVisibleModal}
+                  hideModal={hideModal}
+                  orderData={orderData}
+                />
+              </>
+            );
+          }}
+        </Formik>
       </div>
     );
   })
