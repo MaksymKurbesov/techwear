@@ -1,6 +1,6 @@
 import React from "react";
 import FilterList from "../../components/FilterList/FilterList";
-import MinimizeFilterList from "../../components/FilterList/MinimizeFilterList/MinimizeFilterList";
+import MinimizeFilterList from "../../components/MinimizeFilterList/MinimizeFilterList";
 import ProductsList from "../../components/ProductsList/ProductsList";
 import { FILTERS } from "../../utils/const";
 import { inject, observer } from "mobx-react";

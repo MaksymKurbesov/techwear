@@ -2,15 +2,22 @@ import React, { useState } from "react";
 import CartItemQuantityInput from "./CartItemQuantityInput/CartItemQuantityInput";
 import styles from "./CartItem.module.css";
 
-const CartItem = ({ product, size, removeItem, changeQuantity }) => {
+const CartItem = ({ product, removeItem, setQuantity }) => {
   const [isDeleted, setIsDeleted] = useState(false);
 
-  const handleChangeQuantity = (evt) => {
+  const handlesetQuantity = (evt) => {
     const value = evt.target.value;
 
     if (value <= product.rest) {
-      changeQuantity(product.id, value);
+      setQuantity(product.id, value);
     }
+  };
+
+  const handleDeleteItem = () => {
+    setIsDeleted(true);
+    setTimeout(() => {
+      removeItem(product.id);
+    }, 500);
   };
 
   return (
@@ -29,27 +36,19 @@ const CartItem = ({ product, size, removeItem, changeQuantity }) => {
       <td>
         {product.model}
         <br />
-        <span className={styles.size}>Размер {size}</span>
+        <span className={styles.size}>Размер {product.size}</span>
       </td>
       <td>{product.price}</td>
       <td>
         <CartItemQuantityInput
           quantity={product.quantity}
-          changeQuantity={handleChangeQuantity}
+          setQuantity={handlesetQuantity}
         />
         <span className={styles.rest}>Доступно: {product.rest}</span>
       </td>
       <td>{`₴ ${product.price * product.quantity}`}</td>
       <td>
-        <button
-          className={styles.deleteItemButton}
-          onClick={() => {
-            setIsDeleted(true);
-            setTimeout(() => {
-              removeItem(product.id);
-            }, 500);
-          }}
-        >
+        <button className={styles.deleteItemButton} onClick={handleDeleteItem}>
           X
         </button>
       </td>

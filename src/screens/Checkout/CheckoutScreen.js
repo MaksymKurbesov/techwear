@@ -25,27 +25,28 @@ const CheckoutScreen = inject("stores")(
       document.body.style.marginRight = "0";
     };
 
+    const formikInitialValues = {
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      email: "",
+      delivery: "",
+    };
+
+    const handleSubmit = (values, actions) => {
+      const savedData = {};
+      for (const value in values) {
+        savedData[value] = values[value];
+      }
+      setOrderData(savedData);
+      showModal();
+      stores.cart.clean();
+      actions.resetForm();
+    };
+
     return (
       <div className={styles.checkout}>
-        <Formik
-          initialValues={{
-            firstName: "",
-            lastName: "",
-            phoneNumber: "",
-            email: "",
-            delivery: "",
-          }}
-          onSubmit={(values, actions) => {
-            const savedData = {};
-            for (const value in values) {
-              savedData[value] = values[value];
-            }
-            setOrderData(savedData);
-            showModal();
-            stores.cart.clean();
-            actions.resetForm();
-          }}
-        >
+        <Formik initialValues={formikInitialValues} onSubmit={handleSubmit}>
           {(formData) => {
             const { values, handleChange } = formData;
             return (

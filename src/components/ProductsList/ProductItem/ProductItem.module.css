@@ -12,7 +12,7 @@
   transform: scale(1.05);
 }
 
-.productsItem {
+.productsItem:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -23,5 +23,12 @@
 
   .productsItem img {
     width: 250px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .productsItem:not(:last-child) {
+    margin-right: 0px;
   }
 }

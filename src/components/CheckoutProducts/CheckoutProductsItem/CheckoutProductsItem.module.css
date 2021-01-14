@@ -20,3 +20,23 @@
 .price {
   margin-top: 30px;
 }
+
+@media screen and (max-width: 500px) {
+  .productItem {
+    padding: 10px 0;
+  }
+  .productItem img {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+  }
+  .productItem > div p {
+    font-size: 14px;
+  }
+  .productItem > div span {
+    font-size: 11px;
+  }
+  .price {
+    font-size: 14px;
+  }
+}

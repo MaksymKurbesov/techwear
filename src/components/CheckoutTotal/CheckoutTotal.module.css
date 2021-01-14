@@ -12,3 +12,8 @@
   margin: 15px 0;
 }
 
+@media screen and (max-width: 500px) {
+  .total {
+    font-size: 13px;
+  }
+}

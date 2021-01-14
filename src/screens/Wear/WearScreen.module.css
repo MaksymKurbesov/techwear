@@ -26,6 +26,11 @@
 @media screen and (max-width: 600px) {
   .wear {
     display: block;
-    padding-left: 44px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wear {
+    padding-left: 0;
   }
 }

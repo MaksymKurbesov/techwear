@@ -1,0 +1,23 @@
+.minimizeFilterList {
+  display: none;
+}
+
+.minimizeFilterList::after {
+  content: url('/assets/images/setting.svg');
+  display: block;
+  width: 19px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 700px) {
+  .minimizeFilterList {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .minimizeFilterList {
+    padding-left: 35px;
+  }
+}

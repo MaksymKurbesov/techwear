@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./CartItemQuantityInput.module.css";
 
-const CartItemQuantityInput = ({ quantity, changeQuantity }) => {
+const CartItemQuantityInput = ({ quantity, setQuantity }) => {
   return (
     <input
       className={styles.quantity}
       type="text"
       value={quantity}
-      onChange={changeQuantity}
+      onChange={setQuantity}
     />
   );
 };

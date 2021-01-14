@@ -1,6 +1,6 @@
 import React from "react";
 import NavMenu from "../NavMenu/NavMenu";
-import MinimizeNavMenu from "../NavMenu/MinimizeNavMenu/MinimizeNavMenu";
+import MinimizeNavMenu from "../MinimizeNavMenu/MinimizeNavMenu";
 import { NavLink } from "react-router-dom";
 import { observer, inject } from "mobx-react";
 

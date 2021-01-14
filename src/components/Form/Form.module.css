@@ -67,3 +67,33 @@ div.error {
 .error + input {
   border: 1px solid #f77272;
 }
+
+
+@media screen and (max-width: 600px) {
+  .checkoutForm div {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .checkoutForm label {
+    margin-bottom: 5px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  fieldset {
+    flex-direction: column;
+  }
+  fieldset > div:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  form fieldset:nth-child(2) {
+    margin: 30px 0 40px;
+  }
+  div.error {
+    font-size: 11px;
+  }
+}

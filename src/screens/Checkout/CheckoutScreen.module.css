@@ -20,3 +20,25 @@
   text-align: justify;
   margin-bottom: 5px;
 }
+
+@media screen and (max-width: 1250px) {
+  .checkout {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    grid-template-areas: none;
+  }
+
+  .products {
+    order: -2;
+    margin-bottom: 40px;
+    padding: 15px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .products {
+    padding: 15px;
+  }
+}

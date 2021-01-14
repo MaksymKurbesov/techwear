@@ -36,9 +36,13 @@ class Cart {
     }
   };
 
-  @action changeQuantity = (id, value) => {
+  @action setQuantity = (id, value, minFlag) => {
     const index = this.items.findIndex((item) => item.id === id);
-    this.items[index].quantity = value;
+    if (!minFlag) {
+      this.items[index].quantity = value;
+    } else {
+      this.items[index].quantity += value;
+    }
   };
 
   @action removeItem = (id) => {

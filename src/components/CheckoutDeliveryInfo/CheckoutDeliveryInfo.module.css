@@ -53,3 +53,20 @@
 label:not(:last-child) p {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 1250px) {
+  .delivery {
+    order: -1;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .deliveryText {
+    font-size: 11px;
+    padding: 10px 85px 10px 35px;
+  }
+  .deliveryText::before {
+    left: 7px;
+  }
+}
