@@ -58,3 +58,18 @@
   font-style: normal;
   cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+  .finalOrderModalWrapper {
+    width: 300px;
+    height: 450px;
+    padding-top: 80px;
+  }
+  .finalOrderModalWrapper h2 {
+    font-size: 21px;
+  }
+  .finalOrderModalWrapper i {
+    top: 35px;
+    right: 35px;
+  }
+}

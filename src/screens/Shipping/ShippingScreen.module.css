@@ -1,0 +1,87 @@
+.shipping {
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  display: grid;
+  row-gap: 100px;
+  padding: 25px;
+}
+
+.shipping img {
+  max-width: 100%;
+  justify-self: center;
+}
+
+.shipping a {
+  text-transform: none;
+  color: black;
+}
+
+.shipping a:hover {
+  text-decoration: underline;
+}
+
+.shipping > div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+}
+
+.shipping > div span, .payment > span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.payment > span {
+  display: block;
+  text-align: center;
+  margin: 100px auto 50px; 
+}
+
+.shipping > div p, .payment p {
+  color: rgb(136, 136, 136);
+  font-size: 12px;
+}
+
+.shipping > div p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.payment {
+  padding: 0 25px 75px;
+}
+
+.payment ul {
+  display: grid;
+  max-width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  column-gap: 50px;
+}
+
+.payment ul li > span {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .shipping > div {
+    display: block;
+  }
+  .shipping img {
+    display: none;
+  }
+  .payment ul {
+    display: block;
+  }
+  .payment ul li:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}

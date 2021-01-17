@@ -1,0 +1,46 @@
+.contacts {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 25px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contacts h3 {
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.contacts p {
+  font-size: 13px;
+  color: rgb(136, 136, 136);
+  line-height: 25px;
+  
+}
+
+.contacts span {
+  color: black;
+}
+
+.contacts a {
+  color: black;
+  text-transform: none;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
+
+.accounts ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .contacts {
+    grid-template-columns: 1fr;
+    padding-bottom: 50px;
+  }
+}
