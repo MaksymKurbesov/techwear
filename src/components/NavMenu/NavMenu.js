@@ -2,25 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./NavMenu.module.css";
 
-const NavMenu = ({ toWear, toAccessory }) => {
+const NavMenu = () => {
   return (
     <nav>
       <ul className={styles.navLinks}>
         <li>
-          <NavLink
-            activeClassName={styles.activeLink}
-            onClick={toWear}
-            to="/wear"
-          >
+          <NavLink activeClassName={styles.activeLink} to="/wear">
             Одежда
           </NavLink>
         </li>
         <li>
-          <NavLink
-            activeClassName={styles.activeLink}
-            onClick={toAccessory}
-            to="/accessory"
-          >
+          <NavLink activeClassName={styles.activeLink} to="/accessory">
             Аксессуары
           </NavLink>
         </li>

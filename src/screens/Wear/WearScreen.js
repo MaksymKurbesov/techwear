@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FilterList from "../../components/FilterList/FilterList";
 import MinimizeFilterList from "../../components/MinimizeFilterList/MinimizeFilterList";
 import ProductsList from "../../components/ProductsList/ProductsList";
@@ -9,9 +9,10 @@ import styles from "./WearScreen.module.css";
 const WearScreen = inject("stores")(
   observer(({ stores }) => {
     const { products } = stores;
+    const [isVisibleFilter, setIsVisibleFilter] = useState(true);
 
     const filteredProducts = products.getFilteredProducts(
-      products.category,
+      "wear",
       products.filter
     );
 
@@ -21,8 +22,13 @@ const WearScreen = inject("stores")(
 
     return (
       <div className={styles.wear}>
-        <FilterList handleClick={changeFilter} filters={FILTERS} />
-        <MinimizeFilterList />
+        <FilterList
+          handleClick={changeFilter}
+          filters={FILTERS}
+          isVisibleFilter={isVisibleFilter}
+          setIsVisibleFilter={setIsVisibleFilter}
+        />
+        <MinimizeFilterList setIsVisibleFilter={setIsVisibleFilter} />
         <ProductsList products={filteredProducts} />
       </div>
     );

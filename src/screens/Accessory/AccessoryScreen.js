@@ -8,7 +8,7 @@ const AccessoryScreen = inject("stores")(
     const { products } = stores;
 
     const filteredProducts = products.getFilteredProducts(
-      products.category,
+      "accessory",
       "accessory"
     );
 

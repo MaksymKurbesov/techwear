@@ -29,7 +29,6 @@ const FilledCart = inject("stores")(
     });
 
     const cartDetailedItems = cartStore.items.map(makeDetailedItem);
-
     const isSmallWindow = document.documentElement.clientWidth < 900;
 
     if (isSmallWindow) {

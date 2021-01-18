@@ -10,31 +10,16 @@ const Header = inject("stores")(
   observer(({ stores }) => {
     const CartModel = stores.cart;
 
-    const handleClickToWear = () => {
-      stores.products.setCategory("wear");
-      stores.products.setFilter("");
-    };
-
-    const handleClickToAccessory = () => {
-      stores.products.setCategory("accessory");
-    };
-
     return (
       <header>
         <span className={styles.logotype}>
           <NavLink to="/">TECHWEAR</NavLink>
         </span>
-        <MinimizeNavMenu
-          toAccessory={handleClickToAccessory}
-          toWear={handleClickToWear}
-        />
+        <MinimizeNavMenu />
         <span className={styles.headerCart}>
           <NavLink to="/cart">{`Корзина [${CartModel.items.length}]`}</NavLink>
         </span>
-        <NavMenu
-          toWear={handleClickToWear}
-          toAccessory={handleClickToAccessory}
-        />
+        <NavMenu />
       </header>
     );
   })

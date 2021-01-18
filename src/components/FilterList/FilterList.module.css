@@ -4,8 +4,17 @@
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .filterList {
     display: none;
+    position: absolute;
+    margin-top: 50px;
+    padding: 35px;
+    box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .filterListActive {
+    display: block;
   }
 }

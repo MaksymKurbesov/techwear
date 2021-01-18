@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./MinimizeNavMenu.module.css";
 
-const MinimizeNavMenu = ({ toWear, toAccessory }) => {
+const MinimizeNavMenu = () => {
   const node = useRef();
 
   const handleClick = (evt) => {
@@ -19,24 +19,12 @@ const MinimizeNavMenu = ({ toWear, toAccessory }) => {
           <span onClick={handleClick}>X</span>
           <ul>
             <li>
-              <NavLink
-                onClick={(evt) => {
-                  toWear();
-                  handleClick(evt);
-                }}
-                to="/wear"
-              >
+              <NavLink onClick={handleClick} to="/wear">
                 Одежда
               </NavLink>
             </li>
             <li>
-              <NavLink
-                onClick={(evt) => {
-                  toAccessory();
-                  handleClick(evt);
-                }}
-                to="/accessory"
-              >
+              <NavLink onClick={handleClick} to="/accessory">
                 Аксессуары
               </NavLink>
             </li>
