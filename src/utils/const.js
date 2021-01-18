@@ -10,4 +10,27 @@ const FILTERS = [
   { label: `АРХИВ`, link: `/wear/archive`, type: `archive` },
 ];
 
-export { FILTERS };
+const LINKS = [
+  {
+    to: "/wear",
+    label: "Одежда",
+  },
+  {
+    to: "/accessory",
+    label: "Аксессуары",
+  },
+  {
+    to: "/blog",
+    label: "Блог",
+  },
+  {
+    to: "/shipping",
+    label: "Доставка и оплата",
+  },
+  {
+    to: "/contacts",
+    label: "Контакты",
+  },
+];
+
+export { FILTERS, LINKS };

@@ -37,6 +37,7 @@
 }
 
 .filledCartItem button {
+  font-size: 17px;
   padding: 10px;
   background: none;
   outline: none;

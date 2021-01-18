@@ -9,11 +9,9 @@ const CartButton = observer(({ cart, id, choosedSize }) => {
     : "Добавить в корзину";
 
   const handleRemoveItem = () => {
-    console.log(isAddedToCart);
     cart.removeItem(parseInt(id));
   };
   const handleAddItem = () => {
-    console.log(isAddedToCart);
     cart.addItem(parseInt(id), choosedSize);
   };
 

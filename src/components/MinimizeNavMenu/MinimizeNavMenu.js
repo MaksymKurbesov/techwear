@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { LINKS } from "../../utils/const";
 import styles from "./MinimizeNavMenu.module.css";
 
 const MinimizeNavMenu = () => {
@@ -12,40 +13,22 @@ const MinimizeNavMenu = () => {
     node.current.classList.toggle(styles.active);
   };
 
+  const navLinkElements = LINKS.map((link) => {
+    return (
+      <li key={link.to}>
+        <NavLink onClick={handleClick} to={link.to}>
+          {link.label}
+        </NavLink>
+      </li>
+    );
+  });
+
   const OpenedMenu = () => {
     return (
-      <>
-        <div className={styles.openedMenu} ref={node}>
-          <span onClick={handleClick}>X</span>
-          <ul>
-            <li>
-              <NavLink onClick={handleClick} to="/wear">
-                Одежда
-              </NavLink>
-            </li>
-            <li>
-              <NavLink onClick={handleClick} to="/accessory">
-                Аксессуары
-              </NavLink>
-            </li>
-            <li>
-              <NavLink onClick={handleClick} to="/blog">
-                Блог
-              </NavLink>
-            </li>
-            <li>
-              <NavLink onClick={handleClick} to="/shipping">
-                Доставка и оплата
-              </NavLink>
-            </li>
-            <li>
-              <NavLink onClick={handleClick} to="/contacts">
-                Контакты
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </>
+      <div className={styles.openedMenu} ref={node}>
+        <span onClick={handleClick}>X</span>
+        <ul>{navLinkElements}</ul>
+      </div>
     );
   };
 
