@@ -13,10 +13,10 @@ const App = () => {
         {routes.map((route) => {
           return (
             <Route
-              key={route}
+              key={route.path}
               path={route.path}
               component={route.component}
-              exact
+              exact={route.exact}
             />
           );
         })}

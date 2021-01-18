@@ -23,6 +23,7 @@ const ProductScreen = inject("stores")(
           product={product}
           setChoosedSize={handleChange}
           choosedSize={choosedSize}
+          cart={stores.cart}
         />
       </div>
     );

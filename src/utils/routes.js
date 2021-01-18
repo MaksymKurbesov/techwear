@@ -11,6 +11,7 @@ const routes = [
   {
     path: "/",
     component: MainScreen,
+    exact: true,
   },
   {
     path: "/wear",

@@ -46,7 +46,7 @@ const MinimizeNavMenu = ({ toWear, toAccessory }) => {
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/delivery">
+              <NavLink onClick={handleClick} to="/shipping">
                 Доставка и оплата
               </NavLink>
             </li>
