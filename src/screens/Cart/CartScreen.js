@@ -8,11 +8,10 @@ const CartScreen = inject("stores")(
     const { products } = stores;
     const { cart } = stores;
 
-    if (cart.items.length) {
-      return <FilledCart cartStore={cart} detailsById={products.detailsById} />;
+    if (!cart.items.length) {
+      return <UnfilledCart />;
     }
-
-    return <UnfilledCart />;
+    return <FilledCart cartStore={cart} detailsById={products.detailsById} />;
   })
 );
 

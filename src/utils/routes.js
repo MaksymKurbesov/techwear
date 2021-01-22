@@ -6,6 +6,7 @@ import CartScreen from "../screens/Cart/CartScreen";
 import CheckoutScreen from "../screens/Checkout/CheckoutScreen";
 import ShippingScreen from "../screens/Shipping/ShippingScreen";
 import ContactsScreen from "../screens/Contacts/ContactsScreen";
+import BlogScreen from "../screens/Blog/BlogScreen";
 
 const routes = [
   {
@@ -40,6 +41,10 @@ const routes = [
   {
     path: "/contacts",
     component: ContactsScreen,
+  },
+  {
+    path: "/blog",
+    component: BlogScreen,
   },
 ];
 

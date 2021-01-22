@@ -3,6 +3,11 @@ header {
   margin: 0 auto 75px;
   position: relative;
   text-align: center;
+  color: black;
+}
+
+header.headerMain {
+  color: white;
 }
 
 .headerCart {
@@ -14,4 +19,10 @@ header {
 .logotype {
   display: inline-block;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 400px) {
+  .logotype {
+    margin-right: 40px;
+  }
 }

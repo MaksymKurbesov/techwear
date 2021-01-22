@@ -1,4 +1,3 @@
-
 @keyframes hoverLink {
   to {
     width: 100%;
@@ -18,6 +17,7 @@
   padding: 20px;
   transition: 0.1s all;
 }
+
 
 .navLinks a:hover:before {
   animation: hoverLink 0.5s forwards cubic-bezier(0,.5,.5,.99);
@@ -40,7 +40,15 @@
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.navLinksMain a:before {
+  background-color: white;
+}
+
+.navLinksMain a:after {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 a.activeLink {

@@ -1,12 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { withRouter } from "react-router";
 import { LINKS } from "../../utils/const";
 import styles from "./NavMenu.module.css";
 
-const NavMenu = () => {
+const NavMenu = ({ match }) => {
   const navLinkElements = LINKS.map((link) => {
     return (
-      <li key={link.to}>
+      <li
+        key={link.to}
+        className={`${match.isExact ? styles.navLinksMain : ""}`}
+      >
         <NavLink activeClassName={styles.activeLink} to={link.to}>
           {link.label}
         </NavLink>
@@ -21,4 +25,4 @@ const NavMenu = () => {
   );
 };
 
-export default NavMenu;
+export default withRouter(NavMenu);
