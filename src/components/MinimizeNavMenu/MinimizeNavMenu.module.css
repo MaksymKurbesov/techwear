@@ -60,4 +60,7 @@
   .iconMenu {
     display: block;
   }
+  .iconMenu span {
+    background-color: white;
+  }
 }

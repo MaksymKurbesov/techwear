@@ -12,17 +12,20 @@ header.headerMain {
 
 .headerCart {
   position: absolute;
-  margin-top: 50px;
+  top: 50px;
   right: 50px;
+}
+
+.headerCart a {
+  display: flex;
+  align-items: center;
+}
+
+.headerCart img {
+  margin-left: 10px;
 }
 
 .logotype {
   display: inline-block;
   margin-top: 50px;
-}
-
-@media screen and (max-width: 400px) {
-  .logotype {
-    margin-right: 40px;
-  }
 }

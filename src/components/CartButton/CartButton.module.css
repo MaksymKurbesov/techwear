@@ -10,7 +10,8 @@
   cursor: pointer;
 }
 
-.СartButton:disabled {
+.CartButton:disabled,
+.CartButton[disabled] {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
