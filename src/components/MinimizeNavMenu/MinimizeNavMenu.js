@@ -2,9 +2,12 @@ import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { LINKS } from "../../utils/const";
 import styles from "./MinimizeNavMenu.module.css";
+import { withRouter } from "react-router";
 
-const MinimizeNavMenu = () => {
+const MinimizeNavMenu = ({ match }) => {
   const node = useRef();
+  let className = match.isExact ? styles.iconMenuMain : styles.iconMenu;
+  console.log(match.isExact);
 
   const handleClick = (evt) => {
     if (evt.target.classList.contains(styles.openedMenu)) {
@@ -34,7 +37,7 @@ const MinimizeNavMenu = () => {
 
   return (
     <>
-      <div className={styles.iconMenu} onClick={handleClick}>
+      <div className={className} onClick={handleClick}>
         <span></span>
         <span></span>
         <span></span>
@@ -44,4 +47,4 @@ const MinimizeNavMenu = () => {
   );
 };
 
-export default MinimizeNavMenu;
+export default withRouter(MinimizeNavMenu);
